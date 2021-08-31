@@ -4,10 +4,14 @@ namespace KataSolutions
 {
     public class Reverser
     {
-        public static void Reverse(int[] arr)
+        public static void Reverse<T>(T[] arr)
         {
-            // testa först Array.Reverse, sen testa att skriva en lösning med hjälp av en for-loop istället
-            throw new NotImplementedException();
+            for (int i = 0; i < arr.Length / 2; i++)
+            {
+                T swap = arr[i];
+                arr[i] = arr[arr.Length - 1 - i];
+                arr[arr.Length - 1 - i] = swap;
+            }
         }
     }
 }

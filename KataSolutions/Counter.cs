@@ -15,7 +15,7 @@ namespace KataSolutions
             foreach (string x in words)
             {
                 signsOfWord = x.ToCharArray();
-                if (signsOfWord[0] == letter)
+                if (Char.ToUpper(signsOfWord[0]) == Char.ToUpper(letter))
                     letterCounter++;
             }
 

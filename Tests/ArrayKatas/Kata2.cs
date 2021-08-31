@@ -19,9 +19,9 @@ namespace Tests.ArrayKatas
         [InlineData('c', 16229)]
         [InlineData('q', 822)]
         // Bonus tester
-        //[InlineData('X', 136)]
-        //[InlineData('\t', 0)]
-        //[InlineData('}', 0)]
+        [InlineData('X', 136)]
+        [InlineData('\t', 0)]
+        [InlineData('}', 0)]
         public void WordCounterTest(char letter, int answer)
         {
             string[] wordBook = WordList.Enable1Words;

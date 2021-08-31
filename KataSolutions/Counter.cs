@@ -24,7 +24,15 @@ namespace KataSolutions
 
         public static int CountWordsWithLetterFast(string[] words, char letter)
         {
-            throw new NotImplementedException();
+            int letterCounter = 0;
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (Char.ToUpper(words[i].ToCharArray()[0]) == Char.ToUpper(letter))
+                    letterCounter++;
+            }
+
+            return letterCounter;
         }
     }
 }

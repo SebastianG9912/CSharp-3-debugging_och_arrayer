@@ -29,7 +29,7 @@ namespace Tests.ArrayKatas
 
         // Extrem bonus - använd templating för att göra så att 'Reverse' fungerar på vilken array som helst
         [Theory]
-        [InlineData(new[] { 'A', 'B', 'C', 'D', 'E' }, new[] { 'E', 'D', 'C', 'A', 'B' })]
+        [InlineData(new[] { 'A', 'B', 'C', 'D', 'E' }, new[] { 'E', 'D', 'C', 'B', 'A' })]
         public void GeneralArrayReverserTest(char[] original, char[] reverse)
         {
             Reverser.Reverse(original);

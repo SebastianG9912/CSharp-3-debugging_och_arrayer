@@ -10,7 +10,16 @@ namespace KataSolutions
     {
         public static int CountWordsWithLetter(string[] words, char letter)
         {
-            throw new NotImplementedException();
+            int letterCounter = 0;
+            char[] signsOfWord = new char[0];
+            foreach (string x in words)
+            {
+                signsOfWord = x.ToCharArray();
+                if (signsOfWord[0] == letter)
+                    letterCounter++;
+            }
+
+            return letterCounter;
         }
 
         public static int CountWordsWithLetterFast(string[] words, char letter)

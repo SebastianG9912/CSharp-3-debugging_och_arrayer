@@ -42,5 +42,53 @@ namespace Tests
             Assert.Equal(new []{0,0,0}, salaries);
             Assert.Equal(new string[] { null, null, null }, names);
         }
+
+
+        [Fact]
+        public void ArrayExample()
+        {
+            int age1 = 23;
+            int age2 = 43;
+            int age3 = 98;
+            //                        0   1   2
+            int[] ages = new int[] { 23, 43, 98};
+
+
+            double[] productWeights = new double[4];
+            productWeights[0] = 2.3;
+            productWeights[1] = 2.45;
+            productWeights[2] = 2.1;
+            productWeights[3] = 2.20054;
+
+            for (int productIndex = 0; productIndex < productWeights.Length; productIndex++)
+            {
+                productWeights[productIndex] += 0.05;
+            }
+
+            double totalProductSum = 0.0;
+            foreach (double productWeight in productWeights)
+            {
+                totalProductSum += productWeight;
+            }
+
+            Assert.Equal(4, productWeights.Length);
+        }
+
+        [Fact]
+        public void MoveFirstValueThroughArray()
+        {
+            int[] testArrray = {0, 1, 2, 3, 4 };
+
+            for (int i = 0; i < testArrray.Length - 1; i++)
+            {
+                int indexValue = testArrray[i];
+                int nextIndexedValue = testArrray[i + 1];
+
+                testArrray[i] = nextIndexedValue;
+                testArrray[i + 1] = indexValue;
+            }
+
+            Assert.Equal(new []{ 1, 2, 3, 4, 0}, testArrray);
+        }
     }
 }

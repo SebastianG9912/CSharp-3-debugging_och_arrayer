@@ -13,5 +13,10 @@ namespace KataSolutions
                 arr[arr.Length - 1 - i] = swap;
             }
         }
+
+        public static int[] GetReverse(int[] original)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
